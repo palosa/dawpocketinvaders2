@@ -1,5 +1,5 @@
 <?php
-class ia
+Class ia
 {
    // Declaración de propiedades
    public $columna =0;
@@ -14,11 +14,25 @@ class ia
   }
   //setters
   public function setcolumna($col){
-  $this->columna=$col;
+    if ($col>3) {
+     $this->col=3;
+
+   }elseif ($col<0) {
+       $this->columna=0;
+
+      }else{
+         $this->columna=$col;
  }
+}
   public function setfila($fil){
-  $this->fila=$fil;
+   if ($fil>3) {
+     $this->fila=3;
+
+       $this->fila=0;
+     }else{
+         $this->fila=$fil;
  }
+}
   //random
   public function randomPos(){
      $this->columna=rand (0,3);
